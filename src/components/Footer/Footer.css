@@ -1,0 +1,117 @@
+/* Footer Styles */
+.footer {
+  background-color: #1a202c; /* Equivalent to bg-gray-900 */
+  color: white;
+  margin-top: 133px;
+}
+
+.footer-container {
+  max-width: 112rem; /* Equivalent to max-w-7xl */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 640px) {
+  .footer-container {
+    padding-left: 1.5rem; /* Equivalent to sm:px-6 */
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-container {
+    padding-left: 2rem; /* Equivalent to lg:px-8 */
+    padding-right: 2rem;
+  }
+}
+
+/* Grid Layout */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Footer Header */
+.footer-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.footer-header span {
+  margin-left: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Text */
+.footer-description {
+  color: #e2e8f0; /* Equivalent to text-gray-400 */
+}
+
+/* Links */
+.footer-links h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #e2e8f0; /* Equivalent to text-gray-400 */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+/* Social Icons */
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-socials a {
+  color: #e2e8f0; /* Equivalent to text-gray-400 */
+  transition: color 0.3s ease;
+  margin-top: 19px;
+}
+
+.footer-socials a:hover {
+  color: white;
+}
+
+.footer-socials svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Bottom Border */
+.footer-bottom {
+  border-top: 1px solid #2d3748; /* Equivalent to border-gray-800 */
+  margin-top: 3rem;
+  padding-top: 2rem;
+  text-align: center;
+  color: #e2e8f0; /* Equivalent to text-gray-400 */
+}

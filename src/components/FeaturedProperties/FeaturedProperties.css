@@ -1,0 +1,221 @@
+/* Featured Properties Section */
+.featured-properties-section {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+    background-color: #f7fafc; /* Equivalent to bg-gray-50 */
+   
+  }
+  
+  .featured-properties-container {
+    max-width: 1200px;
+  margin: 0 auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .featured-properties-container {
+      padding-left: 1.5rem; /* Equivalent to sm:px-6 */
+      padding-right: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .featured-properties-container {
+      padding-left: 2rem; /* Equivalent to lg:px-8 */
+      padding-right: 2rem;
+    }
+  }
+  
+  .featured-properties-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .featured-properties-header h2 {
+    font-size: 1.875rem; /* Equivalent to text-3xl */
+    font-weight: bold;
+    color: #1a202c; /* Equivalent to text-gray-900 */
+    margin-bottom: 2rem;
+  }
+  
+  /* Slick Slider Styles */
+  
+  .featured-properties-slider .slick-slide {
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+  }
+  
+  .featured-properties-slider .slick-prev,
+  .featured-properties-slider .slick-next {
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+   
+    font-size: 2.5rem;
+    border-radius: 50%;
+  }
+  
+  .featured-properties-slider .slick-prev:hover,
+  .featured-properties-slider .slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  
+  }
+  
+
+  
+  .slick-dots {
+    bottom: -30px;
+  }
+  
+  .slick-dots li button:before {
+    font-size: 0.5rem;
+    color: #3182ce;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #2b6cb0; /* Active dot color */
+  }
+  
+  /* Property Card */
+  .property-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .property-card:hover {
+    transform: scale(1.05); /* Scale on hover for a slight zoom effect */
+  }
+  
+  .property-image-wrapper {
+    position: relative;
+  }
+  
+  .property-image {
+    width: 100%;
+  height: auto;
+  object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .property-image-wrapper:hover .property-image {
+    transform: scale(1.1); /* Slight zoom on hover */
+  }
+  
+  .property-heart-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Equivalent to shadow-md */
+    transition: background-color 0.3s;
+  }
+  
+  .property-heart-button:hover {
+    background-color: #edf2f7; /* Equivalent to hover:bg-gray-100 */
+  }
+  
+  .property-info {
+    padding: 1.5rem; /* Equivalent to p-6 */
+  }
+  
+  .property-title {
+    font-size: 1.25rem; /* Equivalent to text-xl */
+    font-weight: bold;
+    color: #1a202c; /* Equivalent to text-gray-900 */
+  }
+  
+  .property-location {
+    font-size: 1rem; /* Equivalent to text-sm */
+    color: #4a5568; /* Equivalent to text-gray-600 */
+    display: flex;
+    align-items: center;
+  }
+  
+  .property-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  
+  .detail-item {
+    font-size: 0.875rem; /* Equivalent to text-xs */
+    color: #4a5568; /* Equivalent to text-gray-600 */
+    display: flex;
+    align-items: center;
+  }
+  
+  .property-price {
+    font-size: 1.25rem; /* Equivalent to text-xl */
+    font-weight: bold;
+    color: #2b6cb0; /* Equivalent to text-blue-600 */
+    margin-top: 1rem;
+  }
+  
+  .property-button {
+    display: inline-block;
+    background-color: #3182ce; /* Equivalent to bg-blue-600 */
+    color: white;
+    padding: 0.75rem 1.5rem; /* Equivalent to px-6 py-3 */
+    border-radius: 0.375rem; /* Equivalent to rounded-lg */
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+  
+  .property-button:hover {
+    background-color: #2b6cb0; /* Equivalent to bg-blue-700 */
+    cursor: pointer;
+  }
+  
+
+
+
+  /* skelto loadin ============= */
+
+  .skeleton {
+    background-color: #f7fafc; /* Matches section background */
+    border-radius: 8px;
+    overflow: hidden;
+  
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+  }
+  
+  .skeleton-image {
+    height: 200px;
+    background: linear-gradient(90deg, #e2e8f0, #edf2f7, #e2e8f0);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .skeleton-text {
+    height: 20px;
+    background: linear-gradient(90deg, #e2e8f0, #edf2f7, #e2e8f0);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    margin: 0.75rem 0;
+    border-radius: 4px;
+  }
+  
+  /* Shimmer Animation */
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  

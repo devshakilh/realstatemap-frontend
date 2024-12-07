@@ -1,0 +1,27 @@
+.post-table {
+    table {
+      width: 100%;
+      border-collapse: collapse;
+  
+      th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+  
+      th {
+        background-color: #f4f4f4;
+        color: #333;
+      }
+  
+      button {
+        margin: 0 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+  
+        &:hover {
+          background-color: #ddd;
+        }
+      }
+    }
+  }
+  

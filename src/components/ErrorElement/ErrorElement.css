@@ -1,0 +1,74 @@
+/* General container for the error page */
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f7fafc; /* Equivalent to bg-gray-100 */
+  }
+  
+  /* The card that holds the content */
+  .error-card {
+    max-width: 600px;
+    padding: 24px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  /* Style for the 404 image */
+  .error-image {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  /* Style for the error title */
+  .error-title {
+    margin-top: 24px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2d3748; /* Equivalent to text-gray-800 */
+  }
+  
+  /* Style for the main error message */
+  .error-message {
+    margin-top: 8px;
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: #4a5568; /* Equivalent to text-gray-600 */
+  }
+  
+  /* Style for the description */
+  .error-description {
+    font-size: 0.875rem;
+    margin-top: 1;
+    color: #a0aec0; /* Equivalent to text-gray-500 */
+  }
+  
+  /* Style for the button */
+  .error-button {
+    margin-top: 24px;
+  }
+  
+  /* Button styling */
+  .home-button {
+    padding: 8px 16px;
+    color: white;
+    background-color: #0c85e8; /* Equivalent to bg-blue-500 */
+    border-radius: 8px;
+   
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .home-button:hover {
+    background-color: #3182ce; /* Equivalent to hover:bg-blue-600 */
+  }
+  
+  .home-button:focus {
+    outline: none;
+  }
+  

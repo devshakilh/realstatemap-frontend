@@ -1,0 +1,241 @@
+@import "../../responsive.scss";
+
+.profilePage {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  gap: 40px;
+padding-top: 20px;
+padding-left: 20px;
+
+  @include md {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .details {
+    flex: 3;
+    overflow-y: auto;
+    padding-bottom: 50px;
+
+    @include md {
+      flex: none;
+      height: auto;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h1 {
+          font-weight: 500;
+          font-size: 1.8rem;
+          color: #333;
+        }
+
+        button {
+          padding: 12px 24px;
+          background-color: #0056b3;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 1rem;
+          transition: background-color 0.3s;
+          &:hover {
+            background-color: #f0b836;
+          }
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: #555;
+
+        span {
+          font-size: 1rem;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .avatar {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        button {
+          width: 100px;
+          padding: 10px;
+          background-color: teal;
+          border: none;
+          color: white;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 1rem;
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: #006f60;
+          }
+        }
+      }
+    }
+  }
+
+  .chatContainer {
+    flex: 2;
+    background-color: #fcf5f3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    @include md {
+      flex: none;
+      height: auto;
+    }
+
+    .wrapper {
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .myListings,
+    .myChats {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+
+.userInfoPage {
+
+
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.updateBtn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.updateBtn:hover {
+  background-color: #0056b3;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.avatarContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail {
+  font-size: 16px;
+  color: #555;
+}
+
+.roleBadge {
+  padding: 3px 8px;
+ 
+  border-top-right-radius: 12px;
+  font-weight: bold;
+}
+
+.roleBadge.admin {
+  background-color: #007bff;
+  color: white;
+}
+
+.roleBadge.superadmin {
+  background-color: #f39c12;
+  color: white;
+}
+
+.roleBadge.user {
+  background-color: #28a745;
+  color: white;
+}
+
+.logoutBtn {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.logoutBtn:hover {
+  background-color: #c82333;
+}
+
+.found-p{
+  text-align: center;
+}

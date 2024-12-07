@@ -1,0 +1,42 @@
+.postEdit {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  
+    form label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+  
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+  
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+  
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+  
+        &.delete {
+          background: #e74c3c;
+          color: #fff;
+        }
+      }
+    }
+  }
+  
