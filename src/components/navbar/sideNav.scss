@@ -1,0 +1,85 @@
+/* Side Nav Styles */
+$primary-color: #3498db;
+$bg-color: #2c3e50;
+$hover-color: #2980b9;
+$white: #ffffff;
+
+.sideNav {
+  position: fixed;
+  top: 0;
+  left: -0px;
+  width: 250px;
+  height: 100%;
+  background-color: $bg-color;
+  transition: 0.3s ease;
+  padding-top: 60px;
+  z-index: 9999;
+  box-shadow: 3px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.sideNav.open {
+  left: 0;
+}
+
+.navLinks {
+  list-style: none;
+  padding: 0;
+
+  .navItem {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: $white;
+    font-size: 28px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $hover-color;
+      padding: 12px;
+    }
+  }
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 10000;
+
+  .bar {
+    width: 35px;
+    height: 5px;
+    background-color: $primary-color;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  &.active {
+    .bar:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .bar:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .sideNav {
+    left: -250px; /* Hidden off-screen by default */
+  }
+
+  .sideNav.open {
+    left: 0; /* Slide-in on mobile */
+  }
+}

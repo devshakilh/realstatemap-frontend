@@ -4,6 +4,9 @@ import { AuthContext } from "../../context/AuthContext";
 import apiRequest from "../../lib/apiRequest";
 import { useNavigate } from "react-router-dom";
 import UploadWidget from "../../components/uploadWidget/UploadWidget";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 function ProfileUpdatePage() {
   const { currentUser, updateUser } = useContext(AuthContext);
@@ -28,7 +31,8 @@ function ProfileUpdatePage() {
         avatar: avatar[0],
       });
       updateUser(res.data);
-      setSuccess("Profile updated successfully!");
+      toast.success("Profile updated successfully!...");
+      
       setError("");
       setTimeout(() => navigate("/profile"), 2000);
     } catch (err) {
@@ -101,7 +105,17 @@ function ProfileUpdatePage() {
           setState={setAvatar}
         />
       </div>
-      
+      <ToastContainer
+  position="top-right"
+  autoClose={3000}
+  hideProgressBar={false}
+  newestOnTop={false}
+  closeOnClick
+  rtl={false}
+  pauseOnFocusLoss
+  draggable
+  pauseOnHover
+/>
     </div>
   );
 }

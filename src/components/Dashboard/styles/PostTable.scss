@@ -1,27 +1,72 @@
 .post-table {
-    table {
-      width: 100%;
-      border-collapse: collapse;
-  
-      th, td {
-        border: 1px solid #ddd;
-        padding: 8px;
-      }
-  
-      th {
-        background-color: #f4f4f4;
-        color: #333;
-      }
-  
-      button {
-        margin: 0 5px;
-        padding: 5px 10px;
-        cursor: pointer;
-  
-        &:hover {
-          background-color: #ddd;
-        }
-      }
-    }
-  }
-  
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+td button {
+  margin-right: 10px;
+}
+
+.btn {
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.update-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.update-btn:hover {
+  background-color: #45a049;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #e53935;
+}
+
+.delete-btn:focus, .update-btn:focus {
+  outline: none;
+}

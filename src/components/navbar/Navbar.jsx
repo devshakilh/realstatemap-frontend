@@ -44,6 +44,10 @@ function Navbar() {
               {number > 0 && <div className="notification">{number}</div>}
               <span>Profile</span>
             </Link>
+            <Link to="/dashboard" className="profile">
+              {number > 0 && <div className="notification">{number}</div>}
+              <span>Dashboard</span>
+            </Link>
             
           </div>
         ) : (

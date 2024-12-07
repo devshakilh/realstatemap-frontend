@@ -3,6 +3,11 @@ import "./login.scss";
 import { Link, useNavigate } from "react-router-dom";
 import apiRequest from "../../lib/apiRequest";
 import { AuthContext } from "../../context/AuthContext";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+
+
 
 function Login() {
   const [error, setError] = useState("");
@@ -28,14 +33,20 @@ function Login() {
       });
 
       updateUser(res.data)
-
+      toast.success("Login successful! Redirecting...");
+     
       navigate("/");
     } catch (err) {
+      const errorMessage = err.response?.data?.message || "An error occurred!";
+      toast.error(errorMessage);
       setError(err.response.data.message);
     } finally {
       setIsLoading(false);
     }
   };
+
+
+
   return (
     <div className="login">
       <div className="formContainer">
@@ -62,6 +73,19 @@ function Login() {
       <div className="imgContainer">
         <img src="/bg.png" alt="" />
       </div>
+      <ToastContainer
+  position="top-right"
+  autoClose={3000}
+  hideProgressBar={false}
+  newestOnTop={false}
+  closeOnClick
+  rtl={false}
+  pauseOnFocusLoss
+  draggable
+  pauseOnHover
+/>
+
+
     </div>
   );
 }

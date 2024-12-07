@@ -2,6 +2,11 @@ import "./register.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import apiRequest from "../../lib/apiRequest";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+
+
 
 function Register() {
   const [error, setError] = useState("");
@@ -27,10 +32,12 @@ function Register() {
         password,
         role, // Send role in the request
       });
-
+      toast.success("Registration successful! Redirecting to login...");
       navigate("/login");
     } catch (err) {
-      setError(err.response?.data?.message || "An error occurred!");
+      const errorMessage = err.response?.data?.message || "An error occurred!";
+    toast.error(errorMessage);
+    setError(errorMessage);
     } finally {
       setIsLoading(false);
     }
@@ -58,6 +65,7 @@ function Register() {
       <div className="imgContainer">
         <img src="/bg.png" alt="Background" />
       </div>
+      <ToastContainer position="top-right" autoClose={3000} />
     </div>
   );
 }

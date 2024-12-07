@@ -14,7 +14,23 @@ function ListPage() {
       <div className="listContainer">
         <div className="wrapper">
           <Filter />
-          <Suspense fallback={<Loader className="loader" />}>
+          <Suspense fallback={
+<div className="card skeleton">
+        <div className="imageContainer skeleton-image"></div>
+        <div className="textContainer">
+          <div className="skeleton-title"></div>
+          <div className="skeleton-location"></div>
+          <div className="skeleton-detail"></div>
+          <div className="skeleton-price"></div>
+          <div className="bottom">
+            <div className="features">
+              <div className="feature skeleton-detail"></div>
+              <div className="feature skeleton-detail"></div>
+            </div>
+           
+          </div>
+        </div>
+      </div>}>
             <Await
               resolve={data.postResponse}
               errorElement={<p className="noData">Error loading posts!</p>}
@@ -35,7 +51,10 @@ function ListPage() {
         </div>
       </div>
       <div className="mapContainer">
-        <Suspense fallback={<Loader className="loader" />}>
+        <Suspense fallback={ <div className="map-skeleton">
+        <div className="skeleton-map skeleton-header"></div>
+        <div className="skeleton-map skeleton-body"></div>
+      </div>}>
           <Await
             resolve={data.postResponse}
             errorElement={<p className="noData">Error loading map!</p>}

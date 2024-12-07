@@ -13,6 +13,8 @@ import ErrorElement from "./components/ErrorElement/ErrorElement";
 import Chat from "./components/chat/Chat";
 import Contact from "./components/Contact/Contact";
 import PostEdit from "./components/PostEdit/PostEdit";
+import AdminDashboard from "./routes/dashboard/dashboard";
+import UpdatePostPage from "./routes/dashboard/post";
 
 function App() {
   
@@ -46,6 +48,11 @@ function App() {
            element: <PostEdit />,
         },
         {
+          path: "/posts/:id/edit",
+          element: <UpdatePostPage />, // Component for updating a post
+        },
+        
+        {
         path:"/chat/:sellerId",
           element: <Chat />,
           loader: singlePageLoader,
@@ -67,7 +74,7 @@ function App() {
       element: <RequireAuth />,
       children: [
         {
-          path: "/profile",
+          path: "/dashboard/profile",
           element: <ProfilePage />,
           loader: profilePageLoader
         },
@@ -80,6 +87,13 @@ function App() {
           path: "/add-new",
           element: <NewPostPage />,
         },
+        {
+          path: "/dashboard",
+          element: <AdminDashboard />,
+        },
+        
+        
+        
        
       ],
     },

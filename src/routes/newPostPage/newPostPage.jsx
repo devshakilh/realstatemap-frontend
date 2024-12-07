@@ -7,6 +7,9 @@ import UploadWidget from "../../components/uploadWidget/UploadWidget";
 import {  useNavigate } from "react-router-dom";
 import { MapContainer, Marker, TileLayer, useMap, useMapEvents } from "react-leaflet";
 import { AuthContext } from "../../context/AuthContext";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 
 
@@ -149,10 +152,14 @@ function NewPostPage() {
           restaurant: parseInt(inputs.restaurant),
         },
       });
+      toast.success("Post created successfully!");
       navigate("/"+res.data.id)
     } catch (err) {
-      console.log(err);
-      setError(error);
+      const errorMessage = err.response?.data?.message || "Failed to create the post.";
+    setError(errorMessage);
+
+    // Error toast
+    toast.error(errorMessage);
     }
   };
 
